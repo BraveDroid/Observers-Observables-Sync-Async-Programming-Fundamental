@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Observers-Observables-Sync-Async-Programming-Fundamental.iml" filepath="$PROJECT_DIR$/.idea/modules/Observers-Observables-Sync-Async-Programming-Fundamental.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Observers-Observables-Sync-Async-Programming-Fundamental_main.iml" filepath="$PROJECT_DIR$/.idea/modules/Observers-Observables-Sync-Async-Programming-Fundamental_main.iml" group="Observers-Observables-Sync-Async-Programming-Fundamental" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Observers-Observables-Sync-Async-Programming-Fundamental_test.iml" filepath="$PROJECT_DIR$/.idea/modules/Observers-Observables-Sync-Async-Programming-Fundamental_test.iml" group="Observers-Observables-Sync-Async-Programming-Fundamental" />
+    </modules>
+  </component>
+</project>
