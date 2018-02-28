@@ -18,11 +18,11 @@ public class Main {
        //System.out.println("WorkSynchronouslyInManyThread");
        //taskManager.work(new WorkSynchronouslyInManyThread());
 
-       //System.out.println("WorkAsynchronouslyInOneThread");
-       //taskManager.work(new WorkAsynchronouslyInOneThread());
+        System.out.println("WorkAsynchronouslyInOneThread");
+        taskManager.work(new WorkAsynchronouslyInOneThread());
 
-       System.out.println("WorkAsynchronouslyInManyThread");
-       taskManager.work(new WorkAsynchronouslyInManyThread());
+       //System.out.println("WorkAsynchronouslyInManyThread");
+       //taskManager.work(new WorkAsynchronouslyInManyThread());
 
     }
 }
