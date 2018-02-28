@@ -93,6 +93,7 @@ public class WorkAsynchronouslyInManyThread implements ProcessMethod {
                     if (task4Listener != null) task4Listener.onTask4Result(FibonacciSequence.generateNumber(4));
                 }
             }).start();
+
             new Thread(new Runnable() {
                 public void run() {
                     if (task1Listener != null) task1Listener.onTask1Result(FibonacciSequence.generateNumber(5));
@@ -111,6 +112,7 @@ public class WorkAsynchronouslyInManyThread implements ProcessMethod {
                     if (task4Listener != null) task4Listener.onTask4Result(FibonacciSequence.generateNumber(4));
                 }
             }).start();
+
             new Thread(new Runnable() {
                 public void run() {
                     if (task1Listener != null) task1Listener.onTask1Result(FibonacciSequence.generateNumber(5));
