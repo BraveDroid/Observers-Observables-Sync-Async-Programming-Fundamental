@@ -78,31 +78,74 @@ public class WorkAsynchronouslyInManyThread implements ProcessMethod {
         public void startAsyncTasks() {
             new Thread(new Runnable() {
                 public void run() {
+                    //stimulate random event that happen in 3 seconds
                     final ScheduledExecutorService scheduler = Executors.newScheduledThreadPool(1);
                     scheduler.schedule(new Runnable() {
                         @Override
                         public void run() {
                             if (task1Listener != null) task1Listener.onTask1Result(FibonacciSequence.generateNumber(5));
                             scheduler.shutdown();
-
                         }
                     }, 3, TimeUnit.SECONDS);
-                }
-            }).start();
-            new Thread(new Runnable() {
-                public void run() {
+
                     if (task2Listener != null) task2Listener.onTask2Result(FibonacciSequence.generateNumber(22));
+                    if (task3Listener != null) task3Listener.onTask3Result(FibonacciSequence.generateNumber(10));
+                    if (task4Listener != null) task4Listener.onTask4Result(FibonacciSequence.generateNumber(4));
                 }
             }).start();
             new Thread(new Runnable() {
                 public void run() {
+                    if (task1Listener != null) task1Listener.onTask1Result(FibonacciSequence.generateNumber(5));
+                    //stimulate random event that happen in 3 seconds
+                    final ScheduledExecutorService scheduler = Executors.newScheduledThreadPool(1);
+                    scheduler.schedule(new Runnable() {
+                        @Override
+                        public void run() {
+                            if (task2Listener != null)
+                                task2Listener.onTask2Result(FibonacciSequence.generateNumber(22));
+                            scheduler.shutdown();
+                        }
+                    }, 10, TimeUnit.SECONDS);
+
                     if (task3Listener != null) task3Listener.onTask3Result(FibonacciSequence.generateNumber(10));
+                    if (task4Listener != null) task4Listener.onTask4Result(FibonacciSequence.generateNumber(4));
+                }
+            }).start();
+            new Thread(new Runnable() {
+                public void run() {
+                    if (task1Listener != null) task1Listener.onTask1Result(FibonacciSequence.generateNumber(5));
+                    if (task2Listener != null) task2Listener.onTask2Result(FibonacciSequence.generateNumber(22));
+                    //stimulate random event that happen in 3 seconds
+                    final ScheduledExecutorService scheduler = Executors.newScheduledThreadPool(1);
+                    scheduler.schedule(new Runnable() {
+                        @Override
+                        public void run() {
+                            if (task3Listener != null)
+                                task3Listener.onTask3Result(FibonacciSequence.generateNumber(10));
+                            scheduler.shutdown();
+                        }
+                    }, 2, TimeUnit.SECONDS);
+
+                    if (task4Listener != null) task4Listener.onTask4Result(FibonacciSequence.generateNumber(4));
                 }
             }).start();
 
             new Thread(new Runnable() {
                 public void run() {
-                    if (task4Listener != null) task4Listener.onTask4Result(FibonacciSequence.generateNumber(4));
+                    if (task1Listener != null) task1Listener.onTask1Result(FibonacciSequence.generateNumber(5));
+                    if (task2Listener != null) task2Listener.onTask2Result(FibonacciSequence.generateNumber(22));
+                    if (task3Listener != null) task3Listener.onTask3Result(FibonacciSequence.generateNumber(10));
+                    //stimulate random event that happen in 3 seconds
+                    final ScheduledExecutorService scheduler = Executors.newScheduledThreadPool(1);
+                    scheduler.schedule(new Runnable() {
+                        @Override
+                        public void run() {
+                            if (task4Listener != null) task4Listener.onTask4Result(FibonacciSequence.generateNumber(4));
+                            scheduler.shutdown();
+                        }
+                    }, 5, TimeUnit.SECONDS);
+
+
                 }
             }).start();
         }

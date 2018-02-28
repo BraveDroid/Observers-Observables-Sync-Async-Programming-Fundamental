@@ -76,6 +76,7 @@ public class WorkAsynchronouslyInOneThread implements ProcessMethod {
         }
 
         public void startAsyncTasks() {
+            //stimulate random event that happen in 3 seconds
             final ScheduledExecutorService scheduler = Executors.newScheduledThreadPool(1);
             scheduler.schedule(new Runnable() {
                 @Override
