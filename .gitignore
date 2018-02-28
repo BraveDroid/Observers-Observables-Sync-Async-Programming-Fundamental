@@ -24,3 +24,7 @@ hs_err_pid*
 out/
 .idea/workspace.xml
 .idea/misc.xml
+Observers-Observables-Sync-Async-Programming-Fundamental.iml
+.idea/libraries/Gradle__junit_junit_4_12.xml
+.idea/libraries/Gradle__org_hamcrest_hamcrest_core_1_3.xml
+.idea/uiDesigner.xml
